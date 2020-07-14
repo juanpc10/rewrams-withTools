@@ -1,0 +1,51 @@
+## Project name
+
+Rewrams "Rewarding Customers".
+
+## Repository
+
+https://github.com/juanpc10/rewrams.git
+
+## One liner
+
+Social media reward system for customers
+
+## Project description
+
+Allows business managers to set the discount percent they would like to provide to their customers if they share their experience in the social media of choice
+
+## MVP
+
+Instant and cumulative coupon delivery to users experiencing a product or service. Users take a picture related to their experience with the product/service (e.g. selfie in the gym, selfie dining with friends in a restaurant) and then they receive a coupon code equal to whatever value or cumulative value (if user has had more than one coupon) established already by the business in our app settings that can be changed within the business user account, updating his database with order discount and allowing customer checkout.
+
+## Tech stack
+
+
+MERN: Mongoose, Express, React, Node
+
+For this project the app will work with the instagram api but I would like to later on provide the functionalities of working with other apis to give the opportunity to the client of interacting with the social media platforms of their choice, where their customers are present. 
+
+Here are some other examples of other social media interactions besides instagram that I would like to implement: yelp reviews for restaurants, facebook post and tags for online products, google reviews for dentists, etc.
+
+**Front End:**
+The app has a front-end where the business owner creates and uses his account to manage his discount settings, and also sees the results of his campaign and can make changes accordingly if wanted. The front-end will display a dashbord with graphs, charts, and tables with the data. The app will be for desktop only because we do not want to encourage the user to change the settings as frequent as he desires with the use of his phone, because changing the settings affects the performance of his campaigns and the user most be certain of the changes he/she makes. The front-end will display other useful information about the app, how it works and future feautures that will be implemented.
+
+**Back End:**
+A database that connects the business social media (instagram) account to receive a notification every time is tagged in a post or mentioned in a story.  Notification 
+comes with the username and other useful data that can be extracted from the person that tagged the business entity. Depending if user has already been registered 
+in database, generate a type of code depending on already established rules and the user characteristics such as user order history, preferences, monthly consumption
+or payment plan, etc. Maybe implementing a random bigger coupon to congratulate random users or reward loyal ones. Generate a code upon the reception of such 
+notification and send to username; sending a post request to the business account api connected to the database with the specification of sending a direct 
+message to the username that tagged the business account. Include a link of the business account web page so then the costumer can proceed to checkout if wanted.
+Update database with order modification or creation asynchronous with the post request of sending the coupon.
+
+The back end will consitute of a server that is continuosly making api calls to the api checking for new mentions. The instagram api limit per day is 5,000 calls, so ideally the app will make a fetch call every 2.5 to 5 min checking the inbox messages for sotry mentions, messages are already sorted so whenever we loop to the list and we see a message already stored in our db we can stop the loop avoiding looking through the whole inbox given the case that it could become quite large if the user account actually gets that many interactions if the campaign becomes succesful. For now this process will be running in the server but I think maybe having the process running in the front-end will be more adecuate if possible so then the api calls come from different directions. The server will have two models of databases for each user. It will store the discount settings which will be changing as needed, and then also a database of all the coupons given which will be originated from the replies provided to the customers. Whenever a customer makes an order we delete the coupon from our database and can no longer be valid. We can implement other restrictions as well, for example expiring a coupon if the user deletes the story he tagged our account within a certain time we set, we can also set a restriction to only provide coupons to users with certain number of followers. We can provide as many restrictions as needed but for now I will provide only the restrictions of the discount dynamics for instant coupons and cumulative coupons, each with a maximum discount percentage allowed per user.
+
+The app would work separately from the actual business database of the client where their webpage is located and all information is stored. A manual integration will be necessary at the moment where we connect the app with their webpage so then everytime there is an order we upddate our coupon database, a basic fetch delete call could work. The connection will need to allow the customer database to allow discounts that will be provided continously. Besides that, the app will run smooth separately from the actual client own webpage. Security checks must be implemented to check vulnaribilities from our app fron and back-end but also for the connection with the clients webpage and database.
+
+
+## Data sources
+
+The app relies on the social media apis, for now my main focus is the instagram api which is very difficult to get access to, luckily there are some ways already public to access the the api.
+
+For now, the app relies heavily in the instagram api, I will have to check for updates continously and make sure to be prepared for changes and deprecations, having alternatives, alerting customers, and informing them well of this possible changes.

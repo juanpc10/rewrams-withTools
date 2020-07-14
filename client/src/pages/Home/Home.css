@@ -1,0 +1,70 @@
+
+.about-header {
+  margin: 40px 70px;
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+
+
+.homepage-container {
+  margin-bottom: 100px;
+}
+
+
+
+
+.whatis-header h4 {
+  font-size: 1.5rem;
+  font-weight: 550;
+}
+.whyuse-header h4 {
+  font-size: 1.5rem;
+  font-weight: 550;
+}
+
+
+
+
+
+
+
+.about-rewrams p {
+  margin-top: 40px;
+  margin-right: 130px;
+}
+
+.whyuse-header {
+  margin-top: 70px;
+  color: red;
+}
+
+.whatis-header {
+  color: red;
+  margin-top: 40px;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 300px;
+  /* background-color: blue; */
+}
+
+.about-container  {
+  display: flex;
+  flex-direction: row;
+  /* background-color: blue; */
+}
+
+.about-left {
+  /* background-color: blue; */
+  margin-top: 150px;
+  width: 35%;
+}
+.about-right {
+
+  /* background-color: red; */
+  width: 65%;
+  height: 500px;
+}

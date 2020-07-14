@@ -1,0 +1,214 @@
+
+
+.instagram-page {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 200px;
+}
+
+.ig-header {
+  margin: 20px;
+  align-self: center;
+  color: black;
+}
+
+.ig-header h2 {
+  font-size: 30px;
+  font-weight: 450;
+}
+
+.ig-pagebody {
+  display: flex;
+  flex-direction: row;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  margin-top: 10px;
+}
+
+.right p {
+  align-self: center;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-left: 100px;
+  width: 50%;
+}
+
+.left p {
+  align-self: center;
+}
+
+.ig-connection {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+}
+
+.ig-connection input {
+  margin: 0 10px;
+  width: 150px;
+  height: 25px;
+}
+
+#password input{
+  margin-left: 15px;
+}
+
+.ig-connection-info {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+
+.discount-settings {
+  margin-left: 250px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.ig-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.ig-form-data-button {
+  margin-top: 30px;
+  align-self: center;
+  width: 120px;
+  height: 30px;
+}
+
+.form-data {
+  display: flex;
+  flex-direction: row;
+}
+
+.ig-radiobuttons {
+  display: flex;
+  flex-direction: row;
+}
+.ig-radiobuttons input {
+  margin-right: 20px;
+}
+
+.cumulative {
+  margin-left: 50px;
+}
+
+.cumulative-container {
+  margin-top: 15px;
+  /* margin-left: 10px; */
+}
+
+.settings-specs {
+  font-size: 12px;
+}
+
+.cumulative-single-disc {
+  display: flex;
+  flex-direction: row;
+}
+.max-disc {
+  display: flex;
+  flex-direction: row;
+  /* margin-left: 10px; */
+}
+.max-disc-cumulative {
+  margin-left: 108px;
+}
+
+.settings-input {
+  /* margin-left: 10px; */
+  margin-right: 10px;
+  width: 45px;
+  height: 25px;
+}
+
+
+#cumulative-input-margin-top {
+  margin-top: 10px;
+}
+
+#cumulative-maxdisc-value-margin-top {
+  margin-top: 10px;
+}
+
+.instant {
+  margin-left: 60px;
+  /* margin-top: 15px; */
+}
+
+.instant-container {
+  margin-top: 15px;
+  /* margin-left: 10px; */
+}
+
+.form-input-discount {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.form-input-discount input {
+  color: gray;
+  border: .1px solid red;
+  border-radius: 2px;
+}
+.form-input-discount input:focus {
+  outline: none !important;
+  border:2px solid red;
+  box-shadow: 0 0 10px red;
+}
+
+/* .form-one-discount input[type=number]::-webkit-inner-spin-button {
+  opacity: 1;
+} */
+
+.max-disc {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+
+.form-recommendations {
+  margin-top: 60px;
+  font-size: 13px;
+  color: gray;
+}
+
+.form-recommendations p {
+  text-align: center;
+}
+
+
+
+.ig-campaign-instruction {
+  color: gray;
+}
+
+.ig-campaign-footer {
+  font-size: 14px;
+  /* box-shadow: */
+   /* 0 0 10px gray; */
+  /* 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)  */
+  /* 0 2.8px 2.2px gray,
+  0 6.7px 5.3px gray,
+  0 12.5px 10px gray,
+  0 22.3px 17.9px gray,
+  0 41.8px 33.4px gray,
+  0 100px 80px gray  */
+}
