@@ -201,7 +201,6 @@ function couponGenerator() {
     let inboxInfo = await getInbox(ig,);
     for (let i = 0; i < inboxInfo.length; i++) {
       let singleMsg = inboxInfo[i];
-      console.log(singleMsg)
       let messageThread = singleMsg.threadId;
       let msgUsers = singleMsg.users[0];
       let messageUsername = msgUsers.username;
@@ -313,9 +312,6 @@ function couponGenerator() {
 
             console.log("\n11 -- Sending new coupon to user -- \n".bold.underline.blue);
             let reply = await replyDirectMessage(ig, messageThread, '', '', coupon);
-            console.log("debuggggging")
-            console.log(messageThread)
-            console.log(reply)
             console.log('Reply message =>' + coupon);
 
             console.log('\n12 -- Posting new message to db -- \n'.bold.underline.blue);
@@ -343,122 +339,3 @@ function couponGenerator() {
   console.log("\nProcess done!\n".green);
   // process.exit();
 })();
-
-
-
-
-
-
-
-
-
-// {
-//   threadId: '340282366841710300949128133068751127939',
-//   threadIdV2: '17863230526866819',
-//   isGroup: false,
-//   users: [
-//     {
-//       pk: 36377220137,
-//       username: 'juan23testing1',
-//       full_name: 'Juan tests',
-//       is_private: true,
-//       profile_pic_url: 'https://instagram.flos1-1.fna.fbcdn.net/v/t51.2885-19/44884218_345707102882519_2446069589734326272_n.jpg?_nc_ht=instagram.flos1-1.fna.fbcdn.net&_nc_ohc=8_uE6AH0S60AX-8lH8v&oh=58f938c9d3d563066136e145bc818fba&oe=5F03DA8F&ig_cache_key=YW5vbnltb3VzX3Byb2ZpbGVfcGlj.2',
-//       friendship_status: [Object],
-//       is_verified: false,
-//       has_anonymous_profile_picture: true,
-//       has_threads_app: false,
-//       is_using_unified_inbox_for_direct: false,
-//       interop_messaging_user_fbid: '17842781936212138'
-//     }
-//   ],
-//   readByUser: true,
-//   readByMe: true,
-//   oldest_cursor: '29353145799537152709427955343818752',
-//   next_cursor: 'MAXCURSOR',
-//   lastMessage: {
-//     timeStamp: '1591399895012684',
-//     type: 'text',
-//     messageContent: 'test again'
-//   }
-// }
-// {
-//   threadId: '340282366841710300949128160987959789140',
-//   threadIdV2: '17891149735528020',
-//   isGroup: false,
-//   users: [
-//     {
-//       pk: 499510555,
-//       username: 'juanpc10',
-//       full_name: 'Juan Carrillo',
-//       is_private: false,
-//       profile_pic_url: 'https://instagram.fcul2-1.fna.fbcdn.net/v/t51.2885-19/s150x150/93159595_749582458911280_8559000090050560000_n.jpg?_nc_ht=instagram.fcul2-1.fna.fbcdn.net&_nc_ohc=7A3oA5RA4IoAX_q3A3n&oh=5e11381d6f42f10d123e5f34fbdac9f3&oe=5F05FBAF',
-//       profile_pic_id: '2284796957220549107_499510555',
-//       friendship_status: [Object],
-//       is_verified: false,
-//       has_anonymous_profile_picture: false,
-//       has_threads_app: false,
-//       is_using_unified_inbox_for_direct: false,
-//       interop_messaging_user_fbid: 118111106244198
-//     }
-//   ],
-//   readByUser: true,
-//   readByMe: true,
-//   oldest_cursor: '29354806388525083437059162933035008',
-//   next_cursor: 'MAXCURSOR',
-//   lastMessage: {
-//     timeStamp: '1591397227161656',
-//     type: 'text',
-//     messageContent: '7183323009'
-//   }
-// }
-// {
-//   threadId: '340282366841710300949128138802423038857',
-//   threadIdV2: '17868964198777737',
-//   isGroup: false,
-//   users: [
-//     {
-//       pk: 36777737674,
-//       username: 'juan23testing2',
-//       full_name: 'Pablo Kasimir',
-//       is_private: false,
-//       profile_pic_url: 'https://instagram.flos1-1.fna.fbcdn.net/v/t51.2885-19/44884218_345707102882519_2446069589734326272_n.jpg?_nc_ht=instagram.flos1-1.fna.fbcdn.net&_nc_ohc=8_uE6AH0S60AX-8lH8v&oh=58f938c9d3d563066136e145bc818fba&oe=5F03DA8F&ig_cache_key=YW5vbnltb3VzX3Byb2ZpbGVfcGlj.2',
-//       friendship_status: [Object],
-//       is_verified: false,
-//       has_anonymous_profile_picture: true,
-//       has_threads_app: false,
-//       is_using_unified_inbox_for_direct: false,
-//       interop_messaging_user_fbid: '17842142888225675'
-//     }
-//   ],
-//   readByUser: false,
-//   readByMe: true,
-//   oldest_cursor: '29355990627655776717621160627404800',
-//   next_cursor: 'MAXCURSOR',
-//   lastMessage: {
-//     timeStamp: '1591397226869793',
-//     type: 'text',
-//     messageContent: '6153586418'
-//   }
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

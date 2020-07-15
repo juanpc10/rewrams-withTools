@@ -17,24 +17,24 @@ parser = require('instagram-id-to-url-segment');
 
 */
 
-async function replyDirectMessage(ig, { threadId, userId, story }, message=''){ 
+async function replyDirectMessage(ig, threadId, userId, story, message = '') {
     let threadEntity = null;
-    
+
     if (threadId) {
-        threadEntity  = ig.entity.directThread(threadId);
+        threadEntity = ig.entity.directThread(threadId);
     } else if (userId) {
         threadEntity = ig.entity.directThread([userId.toString()]);
     }
-    
+
     if (!threadEntity) {
         return 'invalid_threadEntity';
     }
     let sendDm = false;
 
-    if(story) {
+    if (story) {
         sendDm = await shareStory(threadEntity, story, message = '');
 
-    }  else {
+    } else {
         sendDm = await threadEntity.broadcastText(message);
     }
 
@@ -51,7 +51,7 @@ module.exports = replyDirectMessage;
       message,
     });
   } */
-  
+
 async function shareStory(threadEntity, story, message = '') {
     return await threadEntity.broadcastUserStory({
         mediaId: story.id,
