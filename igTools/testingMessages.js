@@ -1,5 +1,4 @@
 require('./src/tools-for-instagram.js');
-require('dotenv').config();
 const fetch = require("node-fetch");
 
 
@@ -51,6 +50,7 @@ async function fetchPost(msgItem) {
 };
 
 
+require('dotenv').config();
 const WooCommerceRestApi = require("@woocommerce/woocommerce-rest-api").default;
 
 const WooCommerce = new WooCommerceRestApi({

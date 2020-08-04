@@ -48,7 +48,7 @@ async function fetchPost(msgItem) {
   }
 };
 
-
+require('dotenv').config();
 const WooCommerceRestApi = require("@woocommerce/woocommerce-rest-api").default;
 
 const WooCommerce = new WooCommerceRestApi({
@@ -247,13 +247,24 @@ function couponGenerator() {
               console.log("\n10 -- Checking if a coupon was sent at least a day ago -- \n".bold.underline.blue);
               console.log('under construction')
 
-              console.log("\n11 -- Sending new coupon to user -- \n".bold.underline.blue);
-              let coupon = "sq5mn4fb"      //  coupon causeffct ///////
-              // let coupon = couponGenerator();
+              console.log("\n11 -- Making new coupon in woocommerce -- \n".bold.underline.blue);
+              let coupon = couponGenerator();
+              const data1 = {
+                code: coupon,
+                discount_type: "percent",
+                amount: instantDiscount.toString(),
+                individual_use: true,
+                exclude_sale_items: true,
+                minimum_amount: "0",
+                usage_limit_per_user: 1
+              };
+              let postingcouponInstant = await postCoupon(data1);
+
+              console.log("\n12 -- Sending new coupon to user -- \n".bold.underline.blue);
               let reply = await replyDirectMessage(ig, messageThread, '', '', coupon);
               console.log('Reply message =>' + coupon);
 
-              console.log('\n12 -- Posting new message to db -- \n'.bold.underline.blue);
+              console.log('\n13 -- Posting new message to db -- \n'.bold.underline.blue);
               let newItem1 = {};
               newItem1.account = "testingcauseeffect";
               newItem1.username = messageUsername;
@@ -288,13 +299,24 @@ function couponGenerator() {
               console.log("\n10 -- Checking if a coupon was sent at least a day ago -- \n".bold.underline.blue);
               console.log('under construction')
 
-              console.log("\n11 -- Sending new coupon to user -- \n".bold.underline.blue);
-              let coupon = "nt2gxhxm"
-              // let coupon = couponGenerator();
+              console.log("\n11 -- Making new coupon in woocommerce -- \n".bold.underline.blue);
+              let coupon = couponGenerator();
+              const data3 = {
+                code: coupon,
+                discount_type: "percent",
+                amount: cumulativeDiscount.toString(),
+                individual_use: true,
+                exclude_sale_items: true,
+                minimum_amount: "0",
+                usage_limit_per_user: 1
+              };
+              let postingcouponCumulative = await postCoupon(data3);
+
+              console.log("\n12 -- Sending new coupon to user -- \n".bold.underline.blue);
               let reply = await replyDirectMessage(ig, messageThread, '', '', coupon);
               console.log('Reply message =>' + coupon);
 
-              console.log('\n12 -- Posting new message to db -- \n'.bold.underline.blue);
+              console.log('\n13 -- Posting new message to db -- \n'.bold.underline.blue);
               let newItem2 = {};
               newItem2.account = "testingcauseeffect";
               newItem2.username = messageUsername;
